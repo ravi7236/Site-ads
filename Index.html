@@ -4,181 +4,217 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Grow Your Property Leads — Manas Rao</title>
+  <title>GC MART UC SHOP — Portal</title>
   <style>
     :root{
-      --bg:#071022;
-      --card:#0c1830;
-      --muted:#9fb0cc;
-      --accent1:#7c3aed;
-      --accent2:#06b6d4;
-      --glass: rgba(255,255,255,0.03);
-      --glass-2: rgba(255,255,255,0.02);
-      --success:#10b981;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      --bg:#071427; --panel:#071a2a; --card:#0d1726; --accent:#6f5cff; --accent-2:#00c897;
+      --muted:#9fb0c6; --glass: rgba(255,255,255,0.03);
+      --radius:14px; --maxw:1000px; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
     }
     *{box-sizing:border-box}
-    body{margin:0;min-height:100vh;background:linear-gradient(180deg,#031022 0%, #07132a 60%), var(--bg);color:#eaf3ff}.hero{max-width:1100px;margin:48px auto;padding:28px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);box-shadow:0 20px 40px rgba(2,6,23,0.6);display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center}
+    body{margin:0;min-height:100vh;background:linear-gradient(180deg,#031028 0%, #071427 100%);color:#e9f2fb;display:flex;align-items:center;justify-content:center;padding:28px}
+    .wrap{width:100%;max-width:var(--maxw)}header{display:flex;gap:16px;align-items:center;margin-bottom:20px}
+.logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(7,20,40,0.6)}
+.logo svg{filter:drop-shadow(0 6px 18px rgba(79,63,255,0.18))}
+.brand{font-weight:800;font-size:20px}
+.tag{color:var(--muted);font-size:13px}
 
-.brand{display:flex;align-items:center;gap:12px}
-.logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent1),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:white;box-shadow:0 10px 30px rgba(124,58,237,0.18)}
-h1{margin:8px 0 6px;font-size:22px}
-p.lead{margin:0;color:var(--muted);font-size:14px}
+.grid{display:grid;grid-template-columns:1fr 380px;gap:20px}
+@media (max-width:920px){.grid{grid-template-columns:1fr;}}
 
-.features{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
-.f{background:var(--glass);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);box-shadow:0 12px 36px rgba(2,6,23,0.6)}
+h2{margin:0 0 6px 0}
+.muted{color:var(--muted)}
 
-/* Pitch card */
-.pitch{padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-.stats{display:flex;gap:12px;margin-top:12px}
-.stat{flex:1;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:12px;border-radius:10px;text-align:center}
-.stat h3{margin:0;font-size:18px}
-.stat p{margin:4px 0 0 0;color:var(--muted);font-size:13px}
+label{display:block;font-size:13px;color:var(--muted);margin-bottom:8px}
+input[type=text], select{width:100%;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mt{margin-top:12px}
 
-/* CTA */
-.cta{display:flex;flex-direction:column;gap:12px}
-.cta .btn{padding:12px 14px;border-radius:12px;background:linear-gradient(90deg,var(--accent2),var(--accent1));border:none;color:white;font-weight:700;cursor:pointer;font-size:15px}
-.cta .ghost{padding:10px 12px;border-radius:12px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);cursor:pointer}
-.contact{font-size:13px;color:var(--muted)}
+.amount{font-weight:900;font-size:20px;color:var(--accent)}
 
-/* Right column: Offer box */
-.offer{padding:18px;border-radius:12px;background:linear-gradient(180deg,#061323, rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);}
-.price{font-size:28px;margin:6px 0;font-weight:800}
-.save{font-size:13px;color:var(--muted)}
-.bullets{margin-top:12px}
-.bullets li{margin:8px 0;color:var(--muted)}
+.qr-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;text-align:center}
+.qr-card img{width:240px;height:240px;object-fit:contain;border-radius:10px;background:#fff;padding:6px}
+.upi-id{margin-top:10px;font-weight:700;color:#fff}
+.small{font-size:13px;color:var(--muted)}
 
-/* Testimonials */
-.testimonials{margin-top:18px;display:flex;gap:12px}
-.t{flex:1;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.02)}
-.t p{margin:0;color:var(--muted);font-size:13px}
-.t h4{margin:8px 0 0 0;font-size:14px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;border:none;cursor:pointer;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#021018;font-weight:800}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:700}
 
-/* Footer note */
-.note{margin-top:14px;font-size:13px;color:var(--muted)}
+.price-list{display:flex;gap:10px;margin-top:14px}
+.price-item{flex:1;padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);text-align:center}
+.price-item strong{display:block;font-size:18px;margin-top:6px}
 
-/* subtle animated ribbon */
-.ribbon{position:absolute;right:32px;top:32px;padding:8px 12px;border-radius:999px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;font-weight:700;box-shadow:0 10px 30px rgba(124,58,237,0.18)}
+footer{margin-top:12px;color:var(--muted);font-size:13px}
 
-/* responsive */
-@media (max-width:980px){.hero{grid-template-columns:1fr;}.ribbon{position:static;margin-bottom:12px}}
-
-/* small interactive flourish */
-.pulse{display:inline-block;padding:6px 8px;border-radius:8px;background:linear-gradient(90deg,#0ea5a4,#06b6d4);font-weight:700}
-
-/* animated underline */
-.underline{display:inline-block;position:relative}
-.underline:after{content:'';position:absolute;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--accent2),var(--accent1));bottom:-6px;border-radius:6px;transform:scaleX(0);transform-origin:left;transition:transform .6s cubic-bezier(.2,.9,.25,1)}
-.underline:hover:after{transform:scaleX(1)}
-
-/* small form */\    
-.lead-form{display:flex;flex-direction:column;gap:8px}
-.lead-form input, .lead-form textarea{padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#eaf3ff}
-.lead-form input::placeholder, .lead-form textarea::placeholder{color:var(--muted)}
-.lead-form .small{font-size:12px;color:var(--muted)}
+.notice{margin-top:12px;padding:10px;border-radius:10px;background:linear-gradient(90deg, rgba(111,92,255,0.06), rgba(0,200,151,0.04));color:var(--muted)}
 
   </style>
 </head>
 <body>
-  <div class="hero">
-    <div style="position:relative">
-      <div class="ribbon">Special Intro Offer</div><div class="brand">
-    <div class="logo">MR</div>
-    <div>
-      <h1>Get 3–5x More Property Leads — <span style="color:var(--accent2)">Manas Rao</span></h1>
-      <p class="lead">I run high-converting digital ads for property dealers — targeted, fast, and measurable. Let me bring you motivated buyers.</p>
-      <div class="features">
-        <div class="f">Geo-targeting</div>
-        <div class="f">High-intent Keywords</div>
-        <div class="f">Video Walkthroughs</div>
-        <div class="f">WhatsApp + Call Follow-up</div>
+  <div class="wrap">
+    <header>
+      <div class="logo" aria-hidden>
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="20" height="20" rx="5" fill="#fff" opacity="0.06"/><path d="M7 12h10M7 8h10M7 16h6" stroke="#fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/></svg>
       </div>
-    </div>
-  </div>
-
-  <div class="pitch" style="margin-top:16px">
-    <p style="margin:0;font-size:15px">Why choose me?</p>
-    <div class="stats">
-      <div class="stat"><h3>Avg 24h Response</h3><p class="muted">Fast follow-up keeps you top-of-mind</p></div>
-      <div class="stat"><h3>3–5x Leads</h3><p class="muted">Better targeting + strong creatives</p></div>
-      <div class="stat"><h3>Transparent Reporting</h3><p class="muted">Weekly dashboard + optimisation</p></div>
-    </div>
-
-    <div class="testimonials">
-      <div class="t"><p>“Booked 7 viewings in 10 days — excellent targeting and follow-ups.”</p><h4>— R. Sharma, Broker</h4></div>
-      <div class="t"><p>“CPL dropped 45% after switching to his ads strategy.”</p><h4>— N. Gupta, Builder</h4></div>
-    </div>
-
-    <p class="note">I focus on property listings — residential & commercial. I run ads that convert visitors into booked viewings and verified leads.</p>
-  </div>
-
-  <div style="margin-top:12px;display:flex;gap:12px;align-items:center">
-    <div class="cta">
-      <button class="btn" onclick="document.getElementById('contact-form').scrollIntoView({behavior:'smooth'})">Start a Campaign — Book a Free Audit</button>
-      <button class="ghost" onclick="window.location.href='mailto:manas.rao@example.com?subject=Ads%20for%20My%20Properties'">Email: manas.rao@example.com</button>
-    </div>
-  </div>
-
-</div>
-
-<aside class="offer">
-  <div style="display:flex;align-items:center;justify-content:space-between">
-    <div>
-      <div style="font-size:13px;color:var(--muted)">Intro Package</div>
-      <div class="price">₹9,999 <span style="font-size:14px;color:var(--muted);font-weight:600">/ month</span></div>
-      <div class="save">One-time setup + 2 creatives + 1 video walkthrough</div>
-    </div>
-    <div style="text-align:right">
-      <div style="font-size:12px;color:var(--muted)">Risk-free</div>
-      <div style="font-weight:800;color:var(--success);font-size:14px">Lead Response Guarantee</div>
-    </div>
-  </div>
-
-  <ul class="bullets">
-    <li>Campaign setup & A/B creatives</li>
-    <li>Geo + demographic targeting</li>
-    <li>Weekly optimisation & report</li>
-    <li>WhatsApp + SMS follow-up support</li>
-  </ul>
-
-  <div style="margin-top:12px">
-    <div style="font-size:13px;color:var(--muted)">Quick Contact</div>
-    <div style="margin-top:8px;display:flex;gap:8px">
-      <button class="btn" style="flex:1" onclick="window.location.href='tel:+911234567890'">Call Now</button>
-      <button class="ghost" style="min-width:48px" onclick="window.open('https://wa.me/911234567890')">WhatsApp</button>
-    </div>
-  </div>
-</aside>
-
-<div style="grid-column:1/-1;margin-top:18px;padding-top:12px;border-top:1px dashed rgba(255,255,255,0.03);display:flex;gap:18px;align-items:flex-start">
-  <div style="flex:1">
-    <h3 style="margin:0">Free Audit & Quick Plan</h3>
-    <p style="margin:6px 0 0 0;color:var(--muted)">Share 2–3 listing links or a brief — I’ll send a 48-hour action plan with projected leads and setup checklist.</p>
-  </div>
-
-  <div style="width:380px">
-    <form id="contact-form" class="lead-form" onsubmit="event.preventDefault(); alert('Thanks! I will contact you within 24 hours.');">
-      <input type="text" name="name" placeholder="Your name" required />
-      <input type="tel" name="phone" placeholder="Phone (WhatsApp preferred)" required />
-      <input type="text" name="prop" placeholder="Short: property type & city" />
-      <textarea name="msg" placeholder="Any notes (budgets / timelines)" rows="3"></textarea>
-      <div style="display:flex;gap:8px;align-items:center">
-        <button class="btn" type="submit">Send — Free Audit</button>
-        <div class="small" style="font-size:12px;color:var(--muted);padding-left:8px">Or call: <strong>+91 12345 67890</strong></div>
+      <div>
+        <div class="brand">GC MART UC SHOP</div>
+        <div class="tag">Premium BGMI UC delivery • WhatsApp confirmation</div>
       </div>
+      <div style="margin-left:auto;text-align:right">
+        <div style="font-size:13px;color:var(--muted)">Support</div>
+        <div style="font-weight:800">+91 84234 78713</div>
+      </div>
+    </header><div class="grid">
+  <main class="panel">
+    <h2>Place UC Order</h2>
+    <div class="muted">Fast delivery after payment confirmation. Use the prebuilt QR or pay to the UPI ID below.</div>
+
+    <form id="orderForm" onsubmit="return false;">
+      <div class="mt">
+        <label for="playerId">BGMI ID (numeric)</label>
+        <input id="playerId" type="text" pattern="\d+" placeholder="e.g. 123456789" required>
+      </div>
+
+      <div class="mt">
+        <label for="playerName">Player name / Nickname</label>
+        <input id="playerName" type="text" placeholder="In-game name" required>
+      </div>
+
+      <div class="mt row">
+        <div>
+          <label for="orderQty">Select Pack</label>
+          <select id="orderQty">
+            <option value="7500">7500 UC — ₹1000</option>
+            <option value="14600">14600 UC — ₹2500</option>
+            <option value="26800">26800 UC — ₹4600</option>
+          </select>
+        </div>
+        <div>
+          <label for="txnId">Your Order / Ref (optional)</label>
+          <input id="txnId" type="text" placeholder="Order reference">
+        </div>
+      </div>
+
+      <div class="mt" style="display:flex;align-items:center;justify-content:space-between">
+        <div>
+          <div class="small">Amount to pay</div>
+          <div class="amount" id="amountText">₹1000</div>
+        </div>
+        <div style="text-align:right">
+          <div class="small">Pay via</div>
+          <div style="font-weight:800;margin-top:6px">UPI / PhonePe / Google Pay</div>
+        </div>
+      </div>
+
+      <div class="mt">
+        <label>Payment UPI ID</label>
+        <div class="muted">Send payment to this permanent UPI ID (or scan the QR).</div>
+        <div class="notice">UPI ID: <strong id="upi">8009167325@naviaxis</strong></div>
+      </div>
+
+      <div class="mt" style="display:flex;gap:10px;align-items:center">
+        <button class="btn" id="whatsappBtn">Confirm & Send to WhatsApp</button>
+        <button class="btn ghost" id="downloadHtml" type="button">Download Receipt</button>
+      </div>
+
+      <div class="mt" style="display:flex;gap:8px">
+        <div class="price-list">
+          <div class="price-item"><div class="small">7500 UC</div><strong>₹1000</strong></div>
+          <div class="price-item"><div class="small">14600 UC</div><strong>₹2500</strong></div>
+          <div class="price-item"><div class="small">26800 UC</div><strong>₹4600</strong></div>
+        </div>
+      </div>
+
+      <div class="mt muted">After payment: note the UTR/Ref and press "Confirm & Send to WhatsApp" to open a prefilled message to our support. Attach the payment slip image on WhatsApp if needed.</div>
     </form>
-  </div>
+  </main>
+
+  <aside class="panel qr-card">
+    <h3 style="margin:0 0 8px 0">Prebuilt UPI QR</h3>
+    <div class="small">Scan this from your UPI app to pay instantly (amount editable in your UPI app).</div>
+
+    <!-- QR generated from Google Chart API using the UPI payload for the provided UPI ID -->
+    <img id="prebuiltQR" alt="UPI QR">
+    <div class="upi-id">UPI: <span id="upiText">8009167325@naviaxis</span></div>
+
+    <div style="margin-top:12px;display:flex;gap:8px;justify-content:center">
+      <a id="downloadQR" class="btn" href="#" download="gc-mart-upi-qr.png">Download QR</a>
+      <button class="btn ghost" id="copyUpi">Copy UPI ID</button>
+    </div>
+
+    <footer style="margin-top:14px;text-align:center">
+      <div class="small">Need help? WhatsApp: <strong>+91 84234 78713</strong></div>
+    </footer>
+  </aside>
 </div>
 
   </div>  <script>
-    // small friendly microcopy change to include name dynamically if needed
-    (function(){
-      // If you want the email/phone to be updated dynamically, change values here
-      const email = 'manas.rao@example.com';
-      const phone = '+911234567890';
-      document.querySelectorAll('button.ghost').forEach(b=>{
-        b.addEventListener('click', ()=>{});
+    // Prices
+    const priceMap = {"7500":1000, "14600":2500, "26800":4600};
+    const orderQty = document.getElementById('orderQty');
+    const amountText = document.getElementById('amountText');
+
+    function updateAmount(){
+      const v = orderQty.value;
+      amountText.textContent = '₹' + (priceMap[v] || 0);
+    }
+    orderQty.addEventListener('change', updateAmount);
+    updateAmount();
+
+    // UPI QR generation (uses Google Chart API to render a QR for the UPI deep link)
+    const upiId = '8009167325@naviaxis';
+    const merchantName = 'GC MART';
+    // UPI URI (you may customize amount, note etc. in the app)
+    const upiURI = `upi://pay?pa=${encodeURIComponent(upiId)}&pn=${encodeURIComponent(merchantName)}&cu=INR`;
+    const qrSrc = 'https://chart.googleapis.com/chart?chs=300x300&cht=qr&chld=M|1&chl=' + encodeURIComponent(upiURI);
+    const qrImg = document.getElementById('prebuiltQR');
+    qrImg.src = qrSrc;
+
+    // download link -> point to the same generated QR
+    document.getElementById('downloadQR').href = qrSrc;
+
+    document.getElementById('copyUpi').addEventListener('click', function(){
+      navigator.clipboard.writeText(upiId).then(()=>{
+        alert('UPI ID copied to clipboard: ' + upiId);
       });
-    })();
+    });
+
+    // WhatsApp send
+    document.getElementById('whatsappBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const pid = document.getElementById('playerId').value;
+      const pname = document.getElementById('playerName').value;
+      if(!pid || !pname){ alert('Please enter BGMI ID and player name.'); return; }
+      const pkg = orderQty.value;
+      const amt = amountText.textContent;
+      const txn = document.getElementById('txnId').value || '—';
+      const text = `Hello GC MART,
+I have paid for my UC order.
+
+Player ID: ${pid}
+Player Name: ${pname}
+Package: ${pkg} UC
+Amount: ${amt}
+Order Ref: ${txn}
+UPI: ${upiId}
+
+Please confirm and deliver the UC.`;
+      const phone = '918423478713';
+      const url = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(text);
+      window.open(url, '_blank');
+    });
+
+    // receipt download
+    document.getElementById('downloadHtml').addEventListener('click', function(){
+      const pid = document.getElementById('playerId').value || '—';
+      const pname = document.getElementById('playerName').value || '—';
+      const pkg = orderQty.value;
+      const amt = amountText.textContent;
+      const html = `<!doctype html><html><head><meta charset=\"utf-8\"><title>Receipt</title></head><body><h2>GC MART UC Receipt</h2><p>Player ID: ${pid}</p><p>Player Name: ${pname}</p><p>Package: ${pkg} UC</p><p>Amount: ${amt}</p><p>UPI: ${upiId}</p></body></html>`;
+      const blob = new Blob([html], {type: 'text/html'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href = url; a.download = 'gc-mart-receipt.html'; document.body.appendChild(a); a.click(); a.remove();
+    });
   </script></body>
 </html>
